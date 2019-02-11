@@ -2,7 +2,8 @@ program Assis;
 
 uses
   Vcl.Forms,
-  UMain in 'Presentation\Features\Main\UMain.pas' {fMain};
+  UMain in 'Presentation\Features\Main\UMain.pas' {fMain},
+  Mapper in 'Core\helpers\Mapper.pas';
 
 {$R *.res}
 
