@@ -1,4 +1,4 @@
 theme: jekyll-theme-cayman
 title: Delphi Clean Architecture
-description: Study to make possible Delphi implement a Clean Architecture application to prove that this concept can be applied to Delphi as well. Special thanks to Uncle Bob and all authors from Clean Architecture.
+description: Study to implement Clean Architecture in a Delphi application to prove that this concept can be applied to Delphi as well.\nSpecial thanks to Uncle Bob and all authors from Clean Architecture.
 show_downloads: false
