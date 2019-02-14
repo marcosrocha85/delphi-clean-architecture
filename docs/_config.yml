@@ -2,8 +2,36 @@ theme: jekyll-theme-cayman
 title: Delphi Clean Architecture
 show_downloads: false
 lang: en-US
-t:
+t: 
   en-US:
-    description: Study to make possible Delphi implement a Clean Architecture application to prove that this concept can be applied to Delphi as well.<br>Special thanks to Uncle Bob and all authors from Clean Architecture.
+    description: Study to make possible Delphi implement a Clean Architecture application to prove that this concept can be applied to Delphi as well.\nSpecial thanks to Uncle Bob and all authors from Clean Architecture.
+    intro: |
+      it might look complex, but the Clean Architecture was drawn to allow high decoupling and maintainability on applications. When you build an application using MVC, for example, looking to the sources you quickly identify HOW it was built, don't you? But can you tell, only looking the top most directory structure, what does the application do?
+      According to Robert C. Martin ([The Principles of Clean Architecture by Uncle Bob Martin](https://youtu.be/o_TH-Y78tt4?t=645), 15/12/2015), the higher level of directory structure shouldn't tell us what framework it uses, but what they are supposed to do. Look, if you get a Rails, PHP, Spring with Hibernate you aren't choosing structures, you're only choosing tooks. Your application has to show, at first sight, what it does. The architecture of a software has to be related to a purpose, in other words, any DETAILS like frameworks, database, services has to be &quot;hidden&quot; of the application and not evidenced.
+    mappers: |
+      The mappers are classes responsible to convert entities of a type &quot;Data&quot; to entities of a type &quot;Model&quot;. A good example is to convert the results of a query of a Rest service to the [Interactor](#). In this case we could have a UserRest with id, user_name and user_email. And our [Interactor](#) would return a User with the fields that are used on application domain.
+
+      But [Marcos](https://github.com/marcosrocha85), what is the advantage of have two, three or more identical models?
+
+      Look closer, if an API which your'e consuming returns to /user/25 an object like:
+
+        ```{'id': 25, 'full_name': 'Marcos Rocha', 'mail_address': 'marcosrocha@company.com'}```
+
+      It makes sense if your Entity has id, name and email. The Mapper will just convert the UserRest to User filling field by field MAPPING the attributes. :sunglasses:
+      As we can see on [AddMe](https://github.com/…/rea…/entities/NamesDiskRealmMapper.java).
   pt-BR:
-    description: Estudo para tornar possível a implementação do Clean Architecture em Delphi para provar que este conceito também pode ser aplicado a ele.<br>Agradecimento especial ao Tio Bob e todos os autores do Clean Architecture.
+    description: Estudo para tornar possível a implementação do Clean Architecture em Delphi para provar que este conceito também pode ser aplicado a ele.\nAgradecimento especial ao Tio Bob e todos os autores do Clean Architecture.
+    intro: |
+      Pode até parecer complexo, porém o Clean Architecture foi desenhado para permitir alto desacoplamento e manutebilidade das aplicações. Quando você constrói um aplicativo utilizando MVC, por exemplo, apenas olhando para os fontes você rapidamente identifica o COMO foi construído, não é mesmo? Mas consegue dizer, apenas olhando para a estrutura de pastas mais alta, o que toda a aplicação faz?
+      Segundo Robert C. Martin ([The Principles of Clean Architecture by Uncle Bob Martin](https://youtu.be/o_TH-Y78tt4?t=645), 15/12/2015), o mais alto nível das estruturas de pastas não deveriam dizer qual framework utilizam, mas sim o que se propõem a fazer. Veja, se você pegar Rails, PHP, Spring com Hibernate você não está escolhendo estruturas, está apenas escolhendo as ferramentas. Sua aplicação deve te mostrar logo de cara o que ela faz. A arquitetura de um software deve estar relacionada a um propósito, ou seja, quaisquer DETALHES como frameworks, bancos de dados, serviços devem estar &quot;ocultos&quot;, e não evidenciados.
+    mappers: |
+      Os mappers são classes responsáveis em converter as entidades do tipo &quot;Data&quot; para as entidades do tipo &quot;Model&quot; (no CA chamamos de Entity). Um exemplo bem prático é converter os resultados de uma consulta a um serviço Rest para o Interactor. Neste caso teríamos um UserRest com id, nome e email. E nosso Interactor iria retornar um User com os campos utilizados no domínio da aplicação.
+
+      Mas [Marcos](https://github.com/marcosrocha85), qual a vantagem de ter dois, três ou mais modelos idênticos?
+
+      Veja bem, se a API que você está consumindo retornasse para /user/25 um objeto do tipo:
+
+        ```{'id': 25, 'full_name': 'Marcos Rocha', 'mail_address': 'marcosrocha@company.com'}```
+
+      Faz muito sentido se sua Entity tiver id, name e email. O Mapper vai justamente converter o UserRest para User alimentando campo a campo MAPEANDO os atributos. :sunglasses:
+      Como podemos ver no [AddMe](https://github.com/…/rea…/entities/NamesDiskRealmMapper.java).
