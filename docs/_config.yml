@@ -18,7 +18,7 @@ t:
         ```{'id': 25, 'full_name': 'Marcos Rocha', 'mail_address': 'marcosrocha@company.com'}```
 
       It makes sense if your Entity has id, name and email. The Mapper will just convert the UserRest to User filling field by field MAPPING the attributes. :sunglasses:
-      As we can see on [AddMe](https://github.com/…/rea…/entities/NamesDiskRealmMapper.java).
+      As we can see on [AddMe](https://github.com/policante/AddMe/blob/master/data/src/main/java/com/rpolicante/data/features/names/datasources/disk/realm/entities/NamesDiskRealmMapper.java).
   pt-BR:
     description: Estudo para tornar possível a implementação do Clean Architecture em Delphi para provar que este conceito também pode ser aplicado a ele.\nAgradecimento especial ao Tio Bob e todos os autores do Clean Architecture.
     intro: |
@@ -34,4 +34,4 @@ t:
         ```{'id': 25, 'full_name': 'Marcos Rocha', 'mail_address': 'marcosrocha@company.com'}```
 
       Faz muito sentido se sua Entity tiver id, name e email. O Mapper vai justamente converter o UserRest para User alimentando campo a campo MAPEANDO os atributos. :sunglasses:
-      Como podemos ver no [AddMe](https://github.com/…/rea…/entities/NamesDiskRealmMapper.java).
+      Como podemos ver no [AddMe](https://github.com/policante/AddMe/blob/master/data/src/main/java/com/rpolicante/data/features/names/datasources/disk/realm/entities/NamesDiskRealmMapper.java).
