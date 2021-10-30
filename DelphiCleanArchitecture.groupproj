@@ -1,0 +1,48 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{F020880D-DB45-40C3-8609-C332A06DFCF2}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="Src\CleanArchitectureDelphi.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Test\CleanArchitectureDelphiTests.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="CleanArchitectureDelphi">
+			<MSBuild Projects="Src\CleanArchitectureDelphi.dproj"/>
+		</Target>
+		<Target Name="CleanArchitectureDelphi:Clean">
+			<MSBuild Targets="Clean" Projects="Src\CleanArchitectureDelphi.dproj"/>
+		</Target>
+		<Target Name="CleanArchitectureDelphi:Make">
+			<MSBuild Targets="Make" Projects="Src\CleanArchitectureDelphi.dproj"/>
+		</Target>
+		<Target Name="CleanArchitectureDelphiTests">
+			<MSBuild Projects="Test\CleanArchitectureDelphiTests.dproj"/>
+		</Target>
+		<Target Name="CleanArchitectureDelphiTests:Clean">
+			<MSBuild Targets="Clean" Projects="Test\CleanArchitectureDelphiTests.dproj"/>
+		</Target>
+		<Target Name="CleanArchitectureDelphiTests:Make">
+			<MSBuild Targets="Make" Projects="Test\CleanArchitectureDelphiTests.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="CleanArchitectureDelphi;CleanArchitectureDelphiTests"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="CleanArchitectureDelphi:Clean;CleanArchitectureDelphiTests:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="CleanArchitectureDelphi:Make;CleanArchitectureDelphiTests:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>
