@@ -6,3 +6,6 @@ Special thanks to Uncle Bob and all authors from [Clean Architecture](https://8t
 I would heavily recommend you to watch: [<img valign="middle" src="https://developers.google.com/youtube/images/YouTube-icon-full_color.png" width="24px"/> This video](https://www.youtube.com/watch?v=o_TH-Y78tt4)
 
 ![Clean Architecture Diagram](https://github.com/marcosrocha85/delphi-clean-architecture/blob/master/CleanArchitecture.jpg)
+
+# ATENÇÃO RECRUTADORES
+Este repositório não representa minha organização de código hoje em dia ou quaisquer práticas em Delphi atuais que utilizo. Ele foi desenvolvido no início do meu aprendizado e eu resolvi postar apenas para não deixar tudo "num PenDrive". Programo em Pascal produzindo pacotes de componentes DesignTime, RunTime, consigo criar .DLLs, comunicação com API do Windows e muito mais.
